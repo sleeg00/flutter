@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/widget/button.dart';
+import 'package:toonflix/widget/currency_card.dart';
 
 class Player {
   String? name = "sleeg";
@@ -24,7 +25,8 @@ class App extends StatelessWidget {
         home: Scaffold(
       //화면 구성 구조물
       backgroundColor: const Color(0xFF181818),
-      body: Padding(
+      body: SingleChildScrollView(
+        child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +80,7 @@ class App extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Button(
-                      text: 'transfer',
+                      text: 'Transfer',
                       bgcColor: Color(0xFFFFC107),
                       textColor: Colors.black),
                   Button(
@@ -86,9 +88,67 @@ class App extends StatelessWidget {
                       bgcColor: Color(0xFF1F2123),
                       textColor: Colors.white),
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Wallets',
+                      style: TextStyle(
+                        color: const Color(0xFFFFFFFF).withOpacity(0.8),
+                        fontSize: 32,
+                        fontWeight: FontWeight.w600,
+                      )),
+                  const Text(
+                    'View All',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Color.fromARGB(255, 155, 153, 153),
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const CurrencyCard(
+                name: 'Euro',
+                code: 'EUR',
+                amount: '6 428',
+                icon: Icons.euro_rounded,
+                bgColor: 0xFF1F2123,
+                textColor: 0xFFFFFFFF,
+                x: 0,
+                y: 0,
+              ),
+              const CurrencyCard(
+                name: 'Bitcoin',
+                code: 'BTC',
+                amount: '55 622',
+                icon: Icons.currency_bitcoin,
+                bgColor: 0xFFFFFFFF,
+                textColor: 0xFF000000,
+                x: 0,
+                y: -30,
+              ),
+              const CurrencyCard(
+                name: 'Repee',
+                code: 'INR',
+                amount: '28 981',
+                icon: Icons.currency_rupee_rounded,
+                bgColor: 0xFF1F2123,
+                textColor: 0xFFFFFFFF,
+                x: 0,
+                y: -50,
+              ),
             ],
-          )),
+          ),
+        ),
+      ),
     ));
   }
 }
