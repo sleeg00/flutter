@@ -2,19 +2,86 @@ import 'package:flutter/material.dart';
 import 'package:toonflix/widget/button.dart';
 import 'package:toonflix/widget/currency_card.dart';
 
-class Player {
-  String? name = "sleeg";
-
-  Player({required this.name});
-}
-
 void main() {
-  var sleeg = Player(name: "required");
-
   runApp(App()); //Widget을 넣어줘야한다 -> 레고 블럭 위젯은 디자인 라이브러리 느낌  -> class느낌
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  List<int> numbers = [];
+  void onClicked() {
+    setState(() {
+      //build 메소드 재호출
+      numbers.add(numbers.length);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        textTheme: const TextTheme(
+          titleLarge: TextStyle(
+            color: Colors.red,
+          ),
+        ),
+      ),
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              MyTitle(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyTitle extends StatefulWidget {
+  const MyTitle({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<MyTitle> createState() => _MyTitleState();
+}
+
+class _MyTitleState extends State<MyTitle> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    //무언가를 취소하는 위젯
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    //context -> 상위 위젯 연결 가능
+    return Text(
+      'My Title',
+      style: TextStyle(
+        fontSize: 30,
+        color: Theme.of(context).textTheme.titleLarge?.color,
+      ),
+    );
+  }
+}
+
+class App2 extends StatelessWidget {
   //위젯으로 만들기 위해서는 flutter SDK에 있는
   //3개의 core 위제중 하나를 extends해야한다
 
