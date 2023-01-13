@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/home_screen.dart';
 import 'package:toonflix/widget/button.dart';
 import 'package:toonflix/widget/currency_card.dart';
 
@@ -6,77 +7,20 @@ void main() {
   runApp(App()); //Widget을 넣어줘야한다 -> 레고 블럭 위젯은 디자인 라이브러리 느낌  -> class느낌
 }
 
-class App extends StatefulWidget {
-  @override
-  State<App> createState() => _AppState();
-}
-
-class _AppState extends State<App> {
-  List<int> numbers = [];
-  void onClicked() {
-    setState(() {
-      //build 메소드 재호출
-      numbers.add(numbers.length);
-    });
-  }
-
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        backgroundColor: const Color(0xFFE7626c),
         textTheme: const TextTheme(
-          titleLarge: TextStyle(
-            color: Colors.red,
+          headline1: TextStyle(
+            color: Color(0xFF232B55),
           ),
         ),
+        cardColor: const Color(0xFFF4EDDB),
       ),
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              MyTitle(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class MyTitle extends StatefulWidget {
-  const MyTitle({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  State<MyTitle> createState() => _MyTitleState();
-}
-
-class _MyTitleState extends State<MyTitle> {
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    //무언가를 취소하는 위젯
-    // TODO: implement dispose
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    //context -> 상위 위젯 연결 가능
-    return Text(
-      'My Title',
-      style: TextStyle(
-        fontSize: 30,
-        color: Theme.of(context).textTheme.titleLarge?.color,
-      ),
+      home: const HomeScreen(),
     );
   }
 }
