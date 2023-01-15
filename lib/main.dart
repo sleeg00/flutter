@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/screens/Home_screen.dart';
 import 'package:toonflix/home_screen.dart';
 import 'package:toonflix/widget/button.dart';
 import 'package:toonflix/widget/currency_card.dart';
 
 void main() {
-  runApp(App()); //Widget을 넣어줘야한다 -> 레고 블럭 위젯은 디자인 라이브러리 느낌  -> class느낌
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeScreen(),
+    );
+  }
+}
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -163,3 +174,4 @@ class App2 extends StatelessWidget {
     ));
   }
 }
+
