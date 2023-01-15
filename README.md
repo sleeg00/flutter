@@ -17,13 +17,11 @@ Flutter를 이용한 크로스플랫폼 클론 코딩
 <table>
   <tr>
     <td>  <img src = "https://user-images.githubusercontent.com/96710732/212257183-767c80fc-9f3d-410f-8968-c13e7a01e5eb.png" width="200" height="400"/> </td><td> <img align="center" src = "https://user-images.githubusercontent.com/96710732/212273475-9fe37763-7bb0-4dc2-8a8b-6d4b627e2df9.png" width="200" height="400"/></td>
-  </tr>
-  <tr>
     <td> <img src ="https://user-images.githubusercontent.com/96710732/212533773-4c048085-a6cf-42bf-8b6a-f271cea2096d.png" width="200" height="400"/>
   </td>
   <td> <img src ="https://user-images.githubusercontent.com/96710732/212533860-cf0a718e-1051-4a7d-b681-ee1ed307d5c3.png" width="200" height="400"/>
   </td>
-  </tr>
+ </tr>
 </table>
 
 
