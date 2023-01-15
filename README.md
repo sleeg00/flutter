@@ -22,8 +22,9 @@ Flutter를 이용한 크로스플랫폼 클론 코딩
   <td> <img src ="https://user-images.githubusercontent.com/96710732/212533860-cf0a718e-1051-4a7d-b681-ee1ed307d5c3.png" width="200" height="400"/>
   </td>
  </tr>
+</table>
+
  후기 
  https://sleeg.tistory.com/entry/Flutter-20%EC%8B%9C%EA%B0%84%EB%A7%8C%EC%97%90-Flutter-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
-</table>
 
 
